@@ -3,10 +3,9 @@ useState() /  props / JSstyling
 
 #2
 前回の復習
-react-router-dom
 リストアプリ
 useStateのオブジェクトを登録する
 map関数等
 
 #3
-ルーティング設定
+react-router-domを使ったルーティング設定
