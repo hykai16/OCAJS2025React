@@ -1,0 +1,37 @@
+$primary: #3498db;
+$text-color: #2c3e50;
+$border-radius: 8px;
+
+.thankyou-container {
+  max-width: 600px;
+  margin: 3rem auto;
+  background-color: white;
+  padding: 2.5rem 2rem;
+  border-radius: $border-radius;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  color: $text-color;
+
+  h2 {
+    margin-bottom: 2rem;
+    font-weight: 700;
+  }
+
+  a {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background-color: $primary;
+    color: white;
+    border-radius: $border-radius;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+
+    &:hover {
+      background-color: darken($primary, 10%);
+    }
+  }
+}
