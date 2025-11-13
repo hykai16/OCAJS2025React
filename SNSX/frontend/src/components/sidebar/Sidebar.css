@@ -1,0 +1,70 @@
+.sidebar{
+    flex:2.5;
+    height:100vh;
+}
+
+.sidebarWrapper{
+    padding:20px;
+}
+
+.sidebarList{
+    padding:0;
+    margin:0;
+    list-style: none;
+}
+
+.sidebarListItem{
+    display: flex;
+    align-items: center;
+    margin-bottom:20px;
+    padding:4px 6px;
+    cursor: pointer;
+    transition: all 0.2s;
+    /* あとで子要素の横幅に合わせたい */
+    /* border-radius:90%; */
+}
+
+.sidebarListItem:hover{
+    background-color: gainsboro;
+}
+
+.sidebarIcon{
+    margin-right:10px;
+}
+
+.sidebarPost{
+    width:100%;
+    padding:12px 0;
+    border:none;
+    border-radius: 30px;
+    background-color: black;
+    color:white;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.sidebarAvatar{
+    border-radius: 50%;
+    width:32px;
+    height:32px;
+    margin-right:10px;
+}
+
+.sidebarProfile{
+    margin:50px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.sidebarName{
+    margin:0;
+    font-size:0.9rem;
+}
+
+.sidebarHandle{
+    font-size:0.7rem;
+    color:gray;
+    margin:0;
+}
