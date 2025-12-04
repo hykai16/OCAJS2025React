@@ -1,0 +1,135 @@
+.loginWrapper{
+    display: flex;
+    height:100vh;
+}
+
+.loginLeft{
+    flex:1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo{
+    font-size:40vw;
+}
+
+.loginRight{
+    flex:1;
+    padding:60px;
+}
+
+.mainTitle{
+    font-size:4rem;
+    font-weight:900;
+    margin-bottom:30px;
+}
+
+.subTitle{
+    font-size:2rem;
+    margin-bottom:20px;
+    font-weight:400;
+}
+
+.loginForm{
+    display: flex;
+    flex-direction: column;
+    gap:12px;
+    width:60%;
+    min-width:300px;
+}
+
+.loginForm input{
+    padding:12px 15px;
+    font-size:16px;
+    border-radius: 30px;
+    border:1px solid #ccc;
+    outline: none;
+}
+
+.loginSubmit,.createAccountBtn{
+    padding:12px 15px;
+    font-size:16px;
+    border-radius: 30px;
+    border:1px solid #ccc;
+    outline: none;
+    background-color: white;
+}
+
+.createAccountBtn{
+    width:60%;
+    min-width:300px;
+    color:white;
+    background-color: black;
+}
+
+.separator{
+    display: flex;
+    align-items: center;
+    margin:16px 0;
+    text-align: center;
+    width:60%;
+    min-width:300px;
+}
+
+.separator::before,
+.separator::after{
+    content:"";
+    flex:1;
+    height:1px;
+    background:#e5e5e5;
+    margin:0 12px;
+}
+
+.modalOverlay{
+    position: fixed;
+    inset:0;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modalWrapper{
+    background: #fff;
+    width:400px;
+    padding:30px;
+    border-radius:20px;
+    position:relative;
+}
+
+.modalClose{
+    font-size:1.5rem;
+    position:absolute;
+    top:12px;
+    left:12px;
+    background: none;
+    border:none;
+    cursor: pointer;
+}
+
+.modalWrapper h2{
+    font-size:2rem;
+    text-align: center;
+}
+
+.modalForm{
+    display: flex;
+    flex-direction: column;
+    gap:12px;
+    margin-top:20px;
+}
+
+.modalForm input{
+    padding:12px 15px;
+    font-size:16px;
+    border:1px solid #ccc;
+}
+
+.modalSubmit{
+    margin:10px 0px;
+    padding:10px 0; 
+    background-color: black;
+    color:white;
+}
+

@@ -1,0 +1,20 @@
+.timeline-tab{
+    display: flex;
+    border-bottom: 1px solid #ddd;
+    margin-bottom:8px;
+}
+
+.tab{
+    flex:1;
+    padding:14px 0;
+    background: none;
+    border:none;
+    cursor:pointer;
+    font-size:16px;
+    color:#536471;
+}
+
+.tab.active{
+    color:#000;
+    border-bottom:3px solid #1d9bf0;
+}

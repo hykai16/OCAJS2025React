@@ -1,6 +1,7 @@
 import React from 'react'
 import {Home,Search,Notifications,Mail,List,Bookmark,Group,Person,MoreHoriz} from "@mui/icons-material";
 import "./Sidebar.css";
+import { Link } from 'react-router-dom';
 
 
 const Sidebar = () => {
