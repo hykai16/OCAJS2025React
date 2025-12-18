@@ -13,6 +13,36 @@ router.post("/",async(req,res) => {
     }
 })
 
+//タイムライン…自分の投稿とフォロワーの投稿をずらっと取得
+router.get("/timeline/:userId", async(req,res) => {
+    try{
+        const currentUser = await User.findById(req.params.userId);
+        const userPosts = await Post.find({ userId: currentUser._id});
+        //自分がフォローしているフレンドの投稿
+        const friendPosts = await Promise.all(
+            currentUser.followings.map((friendId) => {
+                return Post.find({ userId:friendId });
+            })
+        )
+        //合体して返す
+        return res.status(200).json(userPosts.concat(...friendPosts));
+    }catch(err){
+        return res.status(500).json(err);
+    }
+})
+
+// 自分（または指定ユーザー）の投稿をすべて取得
+router.get("/profile/:userId", async (req, res) => {
+  try {
+    const posts = await Post.find({ userId: req.params.userId })
+      .sort({ createdAt: -1 }); // 新しい順
+    return res.status(200).json(posts);
+  } catch (err) {
+    return res.status(500).json(err);
+  }
+});
+
+
 //編集
 router.put("/:id",async(req,res) => {
     try{
@@ -82,23 +112,7 @@ router.put("/:id/like",async(req,res) => {
         }
 });
 
-//タイムライン…自分の投稿とフォロワーの投稿をずらっと取得
-router.get("/timeline/all", async(req,res) => {
-    try{
-        const currentUser = await User.findById(req.body.userId);
-        const userPosts = await Post.find({ userId: currentUser._id});
-        //自分がフォローしているフレンドの投稿
-        const friendPosts = await Promise.all(
-            currentUser.followings.map((friendId) => {
-                return Post.find({ userId:friendId });
-            })
-        )
-        //合体して返す
-        return res.status(200).json(userPosts.concat(...friendPosts));
-    }catch(err){
-        return res.status(500).json(err);
-    }
-})
+
 
 
 module.exports = router;
